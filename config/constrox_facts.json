@@ -1,0 +1,29 @@
+{
+  "_readme": "Source-of-truth facts for outreach content. Every merge field in content/ resolves from here. Anything still tagged [NEEDS REAL DATA] is a placeholder — the compliance gate in src/constrox_sdr/compliance.py blocks any message from being queued for send until its placeholders are replaced with real, approved copy. Do not hand-edit this file with invented claims; only put in facts you can stand behind.",
+
+  "company_legal_name": "[NEEDS REAL DATA - e.g. Constrox Ltd]",
+  "company_display_name": "Constrox",
+  "physical_address": "[NEEDS REAL DATA - required for CAN-SPAM / UK PECR sender identification]",
+  "sender_name": "[NEEDS REAL DATA - the human SDR name outreach will be sent from]",
+  "sender_title": "[NEEDS REAL DATA]",
+  "sender_email_signature": "[NEEDS REAL DATA]",
+  "unsubscribe_url": "[NEEDS REAL DATA - must be a working one-click unsubscribe link]",
+  "booking_link": "[NEEDS REAL DATA - discovery call scheduling link, e.g. Calendly]",
+
+  "value_prop_short": "[NEEDS REAL DATA - one-sentence value proposition]",
+  "value_prop_long": "[NEEDS REAL DATA - 2-3 sentence expanded value proposition]",
+
+  "services": [
+    "[NEEDS REAL DATA - e.g. BIM modeling]",
+    "[NEEDS REAL DATA - e.g. CAD drafting]",
+    "[NEEDS REAL DATA - e.g. quantity takeoff / estimating]"
+  ],
+
+  "pricing_summary": "[NEEDS REAL DATA - only a general pricing model/range if Constrox wants it referenced in outreach; leave blank if pricing is never discussed pre-call]",
+
+  "case_studies": [],
+
+  "approved_claims": [],
+
+  "_notes_for_operator": "case_studies and approved_claims are intentionally empty arrays. Populate each case study as {\"client_name\": ..., \"result\": ..., \"can_be_named_publicly\": true/false, \"source\": \"where this was verified\"}. Populate approved_claims as short factual strings (e.g. '10+ years serving AEC firms in the UK') that the compliance claim-checker will treat as pre-cleared. Any numeric or superlative claim in generated content that is NOT traceable to one of these two lists gets flagged for legal/compliance review instead of being sent."
+}

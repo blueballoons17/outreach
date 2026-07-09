@@ -1,0 +1,32 @@
+{
+  "_readme": "Lead scoring weights. total_score = fit_weight * fit_score + intent_weight * intent_score, each sub-score 0-100. All weights are adjustable — change the numbers, no code edits needed. icp.* is currently unpopulated placeholder data; until it's filled in, fit scoring runs in 'neutral mode' (see scoring.py) and every lead gets a fit_score of 50 with a warning logged, so the pipeline is honest about not yet having real targeting criteria.",
+
+  "fit_weight": 0.6,
+  "intent_weight": 0.4,
+
+  "fit_components": {
+    "sub_vertical_match": 40,
+    "company_size_match": 30,
+    "geo_market_match": 30
+  },
+
+  "intent_components": {
+    "recent_hiring_signal": 50,
+    "expansion_or_funding_signal": 50
+  },
+
+  "qualification_threshold": 60,
+
+  "icp": {
+    "sub_verticals": [
+      "[NEEDS REAL DATA - e.g. structural engineering firms, MEP contractors, architecture studios, general contractors]"
+    ],
+    "company_size_min_employees": null,
+    "company_size_max_employees": null,
+    "geo_split_target_pct": {
+      "UK": "[NEEDS REAL DATA]",
+      "US": "[NEEDS REAL DATA]",
+      "AU": "[NEEDS REAL DATA]"
+    }
+  }
+}

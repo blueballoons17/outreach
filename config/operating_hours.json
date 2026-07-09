@@ -1,0 +1,25 @@
+{
+  "_readme": "Allowed send/call/connect windows per market, enforced by compliance.operating_hours_ok(). Times are local to the listed IANA timezone. US is a single default window (Eastern) as a conservative placeholder — TODO: segment by state/timezone once real US target list geography is known, since TCPA call-time rules are evaluated at the *recipient's* local time, not HQ time.",
+
+  "UK": {
+    "timezone": "Europe/London",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    "start": "09:00",
+    "end": "17:30",
+    "notes": "UK PECR restricts unsolicited live/automated calls; cold calling to numbers registered on the Telephone Preference Service (TPS) is prohibited absent a documented exemption."
+  },
+  "US": {
+    "timezone": "America/New_York",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    "start": "09:00",
+    "end": "17:00",
+    "notes": "TODO: TCPA requires call-time compliance (8am-9pm) evaluated at the CALLED PARTY's local time zone, not this default. Do not rely on this single window once prospects span multiple US time zones."
+  },
+  "AU": {
+    "timezone": "Australia/Sydney",
+    "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    "start": "09:00",
+    "end": "17:00",
+    "notes": "Australia's Do Not Call Register and Spam Act 2003 apply; calls also restricted on national public holidays (not modeled here yet)."
+  }
+}

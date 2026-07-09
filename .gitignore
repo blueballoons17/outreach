@@ -1,0 +1,9 @@
+data/crm.db
+outbox/*
+!outbox/.gitkeep
+human_tasks/*
+!human_tasks/.gitkeep
+reports/*
+!reports/.gitkeep
+__pycache__/
+*.pyc
